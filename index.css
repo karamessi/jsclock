@@ -1,0 +1,102 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > div {
+  display: inline-block;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 100%;
+  position: relative;
+  border: 8px solid #222;
+  box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.center {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  z-index: 5;
+}
+
+.hands {
+  --handWidth: 4px;
+  width: var(--handWidth);
+  margin-left: calc(50% - var(--handWidth) / 2);
+  position: absolute;
+  transform-origin: bottom;
+  border-radius: 25%;
+}
+
+.seconds {
+  background-color: maroon;
+  height: 48%;
+  top: 2%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: 4;
+}
+
+.minutes {
+  --handWidth: 6px;
+  height: 45%;
+  top: 5%;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.hours {
+  --handWidth: 8px;
+  height: 30%;
+  top: 20%;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.points {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -11px;
+  margin-top: -11px;
+}
+
+.points > span {
+  position: absolute;
+}
+
+.timezone {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: 20px;
+}
